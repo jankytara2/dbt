@@ -633,7 +633,7 @@ def macro_invalid_args(macro_name) -> NoReturn:
     The "packages" argument of adapter.dispatch() has been deprecated.
     Use the "macro_namespace" argument instead.
 
-    Raised during dispatch for: {macro_name}
+    Raised during dispatch for: {}
 
     For more information, see:
 
