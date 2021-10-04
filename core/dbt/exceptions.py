@@ -628,7 +628,7 @@ def macro_not_found(model, target_macro_id):
         .format(model.unique_id, target_macro_id))
 
 
-def macro_invalid_args(macro_name) -> NoReturn:
+def macro_invalid_dispatch_arg(macro_name) -> NoReturn:
     msg = '''\
     The "packages" argument of adapter.dispatch() has been deprecated.
     Use the "macro_namespace" argument instead.
