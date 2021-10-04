@@ -40,6 +40,7 @@ from dbt.exceptions import (
     InternalException,
     ValidationException,
     RuntimeException,
+    macro_invalid_args,
     missing_config,
     raise_compiler_error,
     ref_invalid_args,
@@ -135,7 +136,7 @@ class BaseDatabaseWrapper:
             raise CompilationException(msg)
 
         if packages is not None:
-            deprecations.warn('dispatch-packages', macro_name=macro_name)
+            raise macro_invalid_args
 
         namespace = packages if packages else macro_namespace
 
